@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>India’s #1 Ride-hailing App - Rapido</title>
+  <meta name="description" content="Rapido, with Bike-Taxis, Autos & Cabs is revolutionising the way India travels. Quick, Affordable rides at your doorstep.">
+  <link rel="icon" href="https://www.rapido.bike/favicon.ico" type="image/x-icon">
+
+  <!-- Google Fonts: Poppins -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <!-- Bootstrap 5.3.3 CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+
+  <!-- Bootstrap Icons -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+  <!-- Custom Stylesheet -->
+  <link rel="stylesheet" href="./assets/css/style.css">
+</head>
+<body>
+
+  <!-- Pure CSS Mobile Menu Checkbox Toggle -->
+  <input type="checkbox" id="navDrawerCheckbox" class="mobile-nav-checkbox">
+  <label for="navDrawerCheckbox" class="mobile-nav-backdrop" aria-hidden="true"></label>
+
+  <!-- ==========================================================================
+       Header / Navbar
+       ========================================================================== -->
+  <header class="site-header">
+    <div class="container-rapido">
+      <div class="navbar-inner">
+        <!-- Yellow Stadium/Pill Logo -->
+        <a href="#home" class="rapido-pill-logo">
+    <img src="./assets/NewLogo.svg" alt="Rapido Logo">
+</a>
+
+        <!-- Desktop Nav Links -->
+        <ul class="nav-links-menu">
+          <li><a href="#home" class="active">Home</a></li>
+          <li><a href="#about">About Us</a></li>
+          <li><a href="#safety">Safety</a></li>
+          <li><a href="#careers">Careers</a></li>
+          <li><a href="#blog">Blog</a></li>
+          <li><a href="#press">Press</a></li>
+          <li><a href="#contact">Contact Us</a></li>
+        </ul>
+
+        <!-- Right Action Button -->
+        <div class="d-flex align-items-center gap-3">
+          <a href="#download-now" class="btn-download-app">
+            Download App
+          </a>
+          <label for="navDrawerCheckbox" class="mobile-nav-toggle" aria-label="Toggle navigation">
+            <i class="bi bi-list"></i>
+          </label>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Pure CSS Mobile Offcanvas Drawer -->
+  <div class="mobile-nav-drawer">
+    <div class="mobile-drawer-header">
+      <a href="#home" class="rapido-pill-logo py-1 px-3 fs-5">
+        <span>rapido</span>
+      </a>
+      <label for="navDrawerCheckbox" class="btn-close-drawer" aria-label="Close">
+        <i class="bi bi-x-lg"></i>
+      </label>
+    </div>
+    <ul class="mobile-nav-list">
+      <li><a href="#home">Home</a></li>
+      <li><a href="#services">Our Services</a></li>
+      <li><a href="#offer">What we offer</a></li>
+      <li><a href="#earn">Earn with Rapido</a></li>
+      <li><a href="#download-now">Download Now</a></li>
+      <li><a href="#about">About Us</a></li>
+      <li><a href="#safety">Safety</a></li>
+      <li><a href="#contact">Contact Us</a></li>
+    </ul>
+    <div class="pt-3 border-top">
+      <a href="#download-now" class="btn btn-dark w-100 py-3 rounded-pill fw-bold text-center d-block text-white">
+        Download App
+      </a>
+    </div>
+  </div>
+
+  <main>
+    <!-- ==========================================================================
+         1. Hero Section: "India's #1 Ride-hailing App" (Screenshot 2)
+         ========================================================================== -->
+    <section class="hero-section" id="home">
+      <div class="container-rapido">
+        <div class="row align-items-center gy-5">
+          <!-- Left Column: Title & Booking Box -->
+          <div class="col-lg-6">
+            <h1 class="hero-heading">
+              India’s #1<br>
+              Ride-hailing App
+            </h1>
+            <p class="hero-subtext">
+              Quick, Affordable rides at your doorstep
+            </p>
+
+            <!-- Booking Box -->
+            <form action="#services" class="hero-booking-box">
+              <!-- Pickup Location -->
+              <div class="hero-input-group">
+                <span class="hero-input-icon">
+                  <i class="bi bi-geo-alt-fill"></i>
+                </span>
+                <input type="text" class="hero-input-field" placeholder="Enter Pickup Location" >
+              </div>
+
+              <!-- Drop Location -->
+              <div class="hero-input-group">
+                <span class="hero-input-icon">
+                  <i class="bi bi-record-circle-fill"></i>
+                </span>
+                <input type="text" class="hero-input-field" placeholder="Enter Drop Location" >
+              </div>
+
+              <!-- Book Ride Button -->
+              <button type="submit" class="btn-book-ride-main">
+                Book Ride
+              </button>
+            </form>
+          </div>
+
+          <!-- Right Column: Hero Fleet Image -->
+          <div class="col-lg-6">
+            <div class="hero-image-container">
+              <img src="https://content-cus.rapido.bike/image/banner_image_new.png" alt="Rapido Ride Fleet" class="hero-fleet-img shadow-sm" loading="eager">
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         2. Section: "Our Services" (Screenshot 1)
+         ========================================================================== -->
+    <section class="services-section" id="services">
+      <div class="container-rapido">
+        <!-- Heading with Yellow Underline -->
+        <div class="section-title-container">
+          <h2 class="section-main-title">Our Services</h2>
+          <div class="title-underline-bar"></div>
+        </div>
+
+        <!-- 6 Service Cards (3 cols x 2 rows) -->
+        <div class="row g-4">
+          <!-- Card 1: Bike-Taxi -->
+          <div class="col-12 col-md-6 col-lg-4">
+            <a href="#download-now" class="service-card-anchor" aria-label="Bike-Taxi - Beat traffic, ride quicker">
+              <div class="service-card-inner">
+                <img src="assets/service_bike_taxi.png" alt="Bike-Taxi - Beat traffic, ride quicker" class="service-card-img" width="772" height="324" loading="lazy">
+              </div>
+            </a>
+          </div>
+
+          <!-- Card 2: Auto -->
+          <div class="col-12 col-md-6 col-lg-4">
+            <a href="#download-now" class="service-card-anchor" aria-label="Auto - Everyday autos, made easy">
+              <div class="service-card-inner">
+                <img src="assets/service_auto.png" alt="Auto - Everyday autos, made easy" class="service-card-img" width="772" height="324" loading="lazy">
+              </div>
+            </a>
+          </div>
+
+          <!-- Card 3: Cab -->
+          <div class="col-12 col-md-6 col-lg-4">
+            <a href="#download-now" class="service-card-anchor" aria-label="Cab - Comfort for every journey">
+              <div class="service-card-inner">
+                <img src="assets/service_cab.png" alt="Cab - Comfort for every journey" class="service-card-img" width="772" height="324" loading="lazy">
+              </div>
+            </a>
+          </div>
+
+          <!-- Card 4: Parcel -->
+          <div class="col-12 col-md-6 col-lg-4">
+            <a href="#download-now" class="service-card-anchor" aria-label="Parcel - Quick, secure & insured deliveries">
+              <div class="service-card-inner">
+                <img src="assets/service_parcel.png" alt="Parcel - Quick, secure & insured deliveries" class="service-card-img" width="772" height="324" loading="lazy">
+              </div>
+            </a>
+          </div>
+
+          <!-- Card 5: Travel and Stay -->
+          <div class="col-12 col-md-6 col-lg-4">
+            <a href="#download-now" class="service-card-anchor" aria-label="Travel and Stay - One app, entire journey">
+              <div class="service-card-inner">
+                <img src="assets/service_travel_and_stay.png" alt="Travel and Stay - One app, entire journey" class="service-card-img" width="772" height="324" loading="lazy">
+              </div>
+            </a>
+          </div>
+
+          <!-- Card 6: Metro Ticket -->
+          <div class="col-12 col-md-6 col-lg-4">
+            <a href="#download-now" class="service-card-anchor" aria-label="Metro Ticket - Rides to and from the metro">
+              <div class="service-card-inner">
+                <img src="assets/service_metro_ticket.png" alt="Metro Ticket - Rides to and from the metro" class="service-card-img" width="772" height="324" loading="lazy">
+              </div>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         3. Section: "What we offer" (Screenshots 4 & 5)
+         ========================================================================== -->
+    <section class="offer-section" id="offer">
+      <div class="container-rapido">
+        <!-- Heading with Yellow Underline -->
+        <div class="section-title-container">
+          <h2 class="section-main-title">What we offer</h2>
+          <div class="title-underline-bar"></div>
+        </div>
+
+        <!-- 3 Feature Cards -->
+        <div class="row g-4">
+          <!-- Card 1: Quick Pickup -->
+          <div class="col-12 col-md-4">
+            <div class="offer-card">
+              <div class="offer-img-wrap">
+                <img src="assets/quick_pickup.png" alt="Quick Pickup" class="offer-img">
+              </div>
+              <h3 class="offer-card-title">Quick Pickup</h3>
+              <p class="offer-card-desc">
+                Pickups within minutes that help you save time on every ride. A Rapido is always nearby when you need to get moving.
+              </p>
+            </div>
+          </div>
+
+          <!-- Card 2: Best Fares -->
+          <div class="col-12 col-md-4">
+            <div class="offer-card">
+              <div class="offer-img-wrap">
+                <img src="assets/best_fares.png" alt="Best Fares" class="offer-img">
+              </div>
+              <h3 class="offer-card-title">Best Fares</h3>
+              <p class="offer-card-desc">
+                Affordable prices designed for everyday rides. Travel more, spend less without compromising on comfort.
+              </p>
+            </div>
+          </div>
+
+          <!-- Card 3: Never Too Far -->
+          <div class="col-12 col-md-4">
+            <div class="offer-card">
+              <div class="offer-img-wrap">
+                <img src="assets/never_too_far.png" alt="Never Too Far" class="offer-img">
+              </div>
+              <h3 class="offer-card-title">Never Too Far</h3>
+              <p class="offer-card-desc">
+                Present across 400+ cities and counting. Wherever you go, find a Rapido ride close by.
+              </p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         4. Section: "Earn with Rapido" (Screenshot 3)
+         ========================================================================== -->
+    <section class="earn-section" id="earn">
+      <div class="container-rapido">
+        <div class="row align-items-center gy-4">
+          <!-- Left Column: Captains Image -->
+          <div class="col-lg-6">
+            <div class="earn-card-img-wrap">
+              <img src="assets/earn_with_rapido.png" alt="Earn with Rapido Captains" class="earn-card-img">
+            </div>
+          </div>
+
+          <!-- Right Column: Heading, Text & Button -->
+          <div class="col-lg-6">
+            <div class="earn-content-wrap">
+              <h2 class="earn-title">
+                Earn with<br>
+                Rapido
+              </h2>
+              <div class="earn-underline-bar"></div>
+              
+              <p class="earn-description">
+                Become a Rapido Captain. Ride when you want, work how you want, and earn on your own terms.
+              </p>
+
+              <a href="#download-now" class="btn-start-earning">
+                Start Earning <i class="bi bi-arrow-right fs-5"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         5. Section: "Download Now" (Screenshot media_1789926959243.png)
+         ========================================================================== -->
+    <section class="download-now-section" id="download-now">
+      <div class="container-rapido">
+        <div class="download-now-header">
+          <h2 class="download-now-title">Download Now</h2>
+          <div class="download-now-underline"></div>
+        </div>
+
+        <div class="download-cards">
+          <img src="https://content-cus.rapido.bike/image/dowloadnow_image.svg" >
+          <img src="https://content-cus.rapido.bike/image/rapido_captain.png" >
+        </div>
+    </section>
+  </main>
+
+  <!-- ==========================================================================
+       6. Footer (Screenshot media_1789926959287.png)
+       ========================================================================== -->
+  <footer class="site-footer-black">
+    <div class="container-rapido">
+      <div class="row gy-4 gx-lg-5">
+        <!-- Col 1: Customer App -->
+        <div class="col-6 col-md-4 col-lg-2">
+          <h4 class="footer-col-head">Customer app</h4>
+          <div class="footer-store-badges">
+            <a href="https://play.google.com/store/apps/details?id=com.rapido.passenger" target="_blank" rel="noreferrer">
+              <img src="./assets/play_store.svg" alt="GET IT ON Google Play">
+            </a>
+            <a href="https://apps.apple.com/in/app/rapido-bike-taxi-auto/id1198464601" target="_blank" rel="noreferrer">
+              <img src="./assets/app_store.svg" alt="Download on the App Store">
+            </a>
+          </div>
+        </div>
+
+        <!-- Col 2: Captain App -->
+        <div class="col-6 col-md-4 col-lg-2">
+          <h4 class="footer-col-head">Captain app</h4>
+          <div class="footer-store-badges">
+            <a href="https://play.google.com/store/apps/details?id=com.rapido.rider" target="_blank" rel="noreferrer">
+              <img src="./assets/play_store.svg" alt="GET IT ON Google Play">
+            </a>
+          </div>
+        </div>
+
+        <!-- Col 3: Navigation Links -->
+        <div class="col-6 col-md-4 col-lg-2">
+          <ul class="footer-links-col">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About Us</a></li>
+            <li><a href="#careers">Careers</a></li>
+            <li><a href="#safety">Safety</a></li>
+            <li><a href="#blog">Blog</a></li>
+            <li><a href="#press">Press</a></li>
+            <li><a href="#privacy">Privacy Policy</a></li>
+          </ul>
+        </div>
+
+        <!-- Col 4: Terms & Corporate -->
+        <div class="col-6 col-md-6 col-lg-4">
+          <ul class="footer-links-col">
+            <li><a href="#terms-bike">Customer Terms - Bike Taxi</a></li>
+            <li><a href="#terms-cabs">Customer Terms - Cabs and Auto</a></li>
+            <li><a href="#corporate">Corporate Affairs</a></li>
+            <li><a href="#captain-terms-bike">Captain Terms - Bike Taxi</a></li>
+            <li><a href="#captain-terms-cabs">Captain Terms - Cabs and Auto</a></li>
+          </ul>
+        </div>
+
+        <!-- Col 5: Follow Us -->
+        <div class="col-12 col-md-6 col-lg-2">
+          <h4 class="footer-col-head">Follow Us</h4>
+          <div class="footer-social-row">
+            <a href="https://www.facebook.com/rapido4bike" target="_blank" rel="noreferrer" title="Facebook">
+              <i class="bi bi-facebook"></i>
+            </a>
+            <a href="https://x.com/rapidobikeapp" target="_blank" rel="noreferrer" title="Twitter">
+              <i class="bi bi-twitter"></i>
+            </a>
+            <a href="https://www.linkedin.com/company/rapido-bike/" target="_blank" rel="noreferrer" title="LinkedIn">
+              <i class="bi bi-linkedin"></i>
+            </a>
+            <a href="https://www.instagram.com/rapidoapp/" target="_blank" rel="noreferrer" title="Instagram">
+              <i class="bi bi-instagram"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Centered Copyright -->
+      <div class="footer-copyright">
+        © 2026 Roppen Transportation. All rights reserved.
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>
