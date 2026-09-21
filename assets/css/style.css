@@ -1,746 +1,1459 @@
-/* ==========================================================================
-   Rapido Homepage Clone Stylesheet
-   Pure CSS - Pixel-accurate styling matching all provided UI screenshots
-   Zero JavaScript
-   ========================================================================== */
+/* =========================================================
+   RAPIDO RESPONSIVE WEBSITE
+   Complete Responsive CSS
+   ========================================================= */
 
-:root {
-  --rapido-yellow: #FFCA20;
-  --rapido-yellow-hover: #e6b315;
-  --rapido-black: #1A1A1A;
-  --rapido-dark-blue: #1E4B82;
-  --rapido-card-bg: #F4F6F8;
-  --rapido-text-grey: #5C6675;
-  --rapido-border: #E0E3E6;
-  --font-primary: 'Poppins', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-  --transition-smooth: all 0.25s cubic-bezier(0.25, 0.8, 0.25, 1);
-}
+/* =========================================================
+   GLOBAL
+   ========================================================= */
 
-/* Global Reset */
 * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
 html {
-  scroll-behavior: smooth;
+    scroll-behavior: smooth;
 }
 
 body {
-  font-family: var(--font-primary);
-  color: var(--rapido-black);
-  background-color: #ffffff;
-  overflow-x: hidden;
-  line-height: 1.5;
-  -webkit-font-smoothing: antialiased;
+    font-family: "Poppins", sans-serif;
+    color: #111;
+    background: #fff;
+    overflow-x: hidden;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
 }
 
 a {
-  text-decoration: none;
-  color: inherit;
-  transition: var(--transition-smooth);
+    text-decoration: none;
+    color: inherit;
 }
 
-/* Container width standard */
+button,
+input {
+    font-family: "Poppins", sans-serif;
+}
+
 .container-rapido {
-  width: 100%;
-  max-width: 1180px;
-  margin: 0 auto;
-  padding: 0 20px;
+    width: 100%;
+    max-width: 1240px;
+    margin: 0 auto;
+    padding-left: 24px;
+    padding-right: 24px;
 }
 
-/* Section Title with Yellow Underline Bar */
-.section-title-container {
-  display: inline-flex;
-  flex-direction: column;
-  align-items: flex-start;
-  margin-bottom: 2.25rem;
-}
 
-.section-main-title {
-  font-size: 2.75rem;
-  font-weight: 800;
-  color: var(--rapido-black);
-  letter-spacing: -0.5px;
-  line-height: 1.2;
-}
+/* =========================================================
+   NAVBAR
+   ========================================================= */
 
-.title-underline-bar {
-  width: 90px;
-  height: 5px;
-  background-color: var(--rapido-yellow);
-  border-radius: 3px;
-  margin-top: 8px;
-}
-
-/* ==========================================================================
-   1. Header & Navigation Bar
-   ========================================================================== */
 .site-header {
-  position: sticky;
-  top: 0;
-  z-index: 1040;
-  background-color: #ffffff;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.04);
-  padding: 14px 0;
+    position: sticky;
+    top: 0;
+    z-index: 9999;
+    width: 100%;
+    background: #fff;
+    border-bottom: 1px solid #eee;
 }
 
 .navbar-inner {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
+    min-height: 78px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 30px;
 }
 
-/* Brand Yellow Stadium / Pill Logo */
+/* Logo */
+
 .rapido-pill-logo {
-  background-color: var(--rapido-yellow);
-  color: #000000;
-  font-size: 3 rem;
-  font-weight: 800;
-  padding: 6px 26px;
-  border-radius: 999px;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  letter-spacing: -0.5px;
-  text-decoration: none;
-  line-height: 2;
-  transition: transform 0.2s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
 }
 
-.rapido-pill-logo:hover {
-  color: #000000;
-  transform: scale(1.02);
+.rapido-pill-logo img {
+    width: 150px;
+    max-height: 55px;
+    object-fit: contain;
 }
 
-/* Centered Navigation Links */
+/* Desktop Navigation */
+
 .nav-links-menu {
-  display: flex;
-  align-items: center;
-  gap: 28px;
-  list-style: none;
-  margin: 0;
-  padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 28px;
+
+    list-style: none;
+    margin: 0;
+    padding: 0;
+
+    flex: 1;
 }
 
-.nav-links-menu li a {
-  font-size: 0.95rem;
-  font-weight: 500;
-  color: var(--rapido-black);
-  padding: 4px 0;
-  position: relative;
-  transition: color 0.2s ease;
+.nav-links-menu li {
+    margin: 0;
+    padding: 0;
 }
 
-.nav-links-menu li a:hover {
-  color: #000000;
+.nav-links-menu a {
+    position: relative;
+
+    font-size: 14px;
+    font-weight: 500;
+
+    color: #222;
+
+    transition: color 0.3s ease;
 }
 
-/* Active Link has solid black bottom line indicator */
-.nav-links-menu li a.active {
-  font-weight: 700;
-  color: #000000;
+.nav-links-menu a:hover,
+.nav-links-menu a.active {
+    color: #f5c400;
 }
 
-.nav-links-menu li a.active::after {
-  content: '';
-  position: absolute;
-  left: 0;
-  bottom: -4px;
-  width: 100%;
-  height: 3px;
-  background-color: #000000;
-  border-radius: 2px;
+.nav-links-menu a::after {
+    content: "";
+
+    position: absolute;
+    left: 0;
+    bottom: -7px;
+
+    width: 0;
+    height: 2px;
+
+    background: #f5c400;
+
+    transition: width 0.3s ease;
+}
+
+.nav-links-menu a:hover::after,
+.nav-links-menu a.active::after {
+    width: 100%;
 }
 
 
-/* Right Download App Button */
+/* =========================================================
+   DESKTOP DOWNLOAD BUTTON
+   ========================================================= */
+
 .btn-download-app {
-  background-color: #000000;
-  color: #ffffff !important;
-  font-weight: 600;
-  font-size: 0.95rem;
-  padding: 10px 28px;
-  border-radius:20px 20px 4px 20px;
-  border: none;
-  cursor: pointer;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  transition: background-color 0.2s ease, transform 0.15s ease;
-  white-space: nowrap;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    background: #111;
+    color: #fff;
+
+    padding: 12px 24px;
+
+    border-radius: 30px;
+
+    font-size: 14px;
+    font-weight: 600;
+
+    white-space: nowrap;
+
+    transition: all 0.3s ease;
 }
 
 .btn-download-app:hover {
-  background-color: #262626;
-  transform: translateY(-1px);
+    background: #f5c400;
+    color: #111;
+
+    transform: translateY(-2px);
 }
 
-/* Pure-CSS Mobile Navigation Drawer */
+
+/* =========================================================
+   MOBILE NAVIGATION
+   ========================================================= */
+
 .mobile-nav-checkbox {
-  display: none;
+    display: none;
 }
 
 .mobile-nav-toggle {
-  display: none;
-  background: none;
-  border: none;
-  font-size: 1.75rem;
-  color: var(--rapido-black);
-  cursor: pointer;
-  line-height: 1;
-}
+    display: none;
 
-.mobile-nav-backdrop {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100vw;
-  height: 100vh;
-  background: rgba(0, 0, 0, 0.4);
-  z-index: 1045;
-  opacity: 0;
-  visibility: hidden;
-  transition: opacity 0.25s ease, visibility 0.25s ease;
+    align-items: center;
+    justify-content: center;
+
+    width: 42px;
+    height: 42px;
+
+    cursor: pointer;
+
+    font-size: 28px;
+    line-height: 1;
+
+    color: #111;
 }
 
 .mobile-nav-drawer {
-  position: fixed;
-  top: 0;
-  right: -320px;
-  width: 280px;
-  height: 100vh;
-  background: #ffffff;
-  box-shadow: -4px 0 20px rgba(0, 0, 0, 0.15);
-  z-index: 1050;
-  padding: 24px;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  transition: right 0.3s ease;
+    position: fixed;
+
+    top: 0;
+    right: -100%;
+
+    width: min(350px, 88%);
+    height: 100vh;
+
+    background: #fff;
+
+    z-index: 10000;
+
+    padding: 24px;
+
+    box-shadow: -10px 0 30px rgba(0, 0, 0, 0.15);
+
+    transition: right 0.35s ease;
+
+    overflow-y: auto;
+}
+
+.mobile-nav-backdrop {
+    position: fixed;
+
+    inset: 0;
+
+    background: rgba(0, 0, 0, 0.45);
+
+    z-index: 9998;
+
+    opacity: 0;
+    visibility: hidden;
+
+    transition: all 0.3s ease;
+
+    cursor: pointer;
 }
 
 .mobile-nav-checkbox:checked ~ .mobile-nav-backdrop {
-  opacity: 1;
-  visibility: visible;
+    opacity: 1;
+    visibility: visible;
 }
 
 .mobile-nav-checkbox:checked ~ .mobile-nav-drawer {
-  right: 0;
+    right: 0;
 }
 
 .mobile-drawer-header {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding-bottom: 1rem;
-  border-bottom: 1px solid #E5E7EB;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding-bottom: 20px;
+
+    border-bottom: 1px solid #eee;
 }
 
 .btn-close-drawer {
-  background: none;
-  border: none;
-  font-size: 1.5rem;
-  color: #374151;
-  cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 40px;
+    height: 40px;
+
+    cursor: pointer;
+
+    font-size: 22px;
 }
 
 .mobile-nav-list {
-  list-style: none;
-  padding: 1.5rem 0;
-  margin: 0;
-  display: flex;
-  flex-direction: column;
-  gap: 16px;
+    list-style: none;
+
+    margin: 25px 0;
+    padding: 0;
+}
+
+.mobile-nav-list li {
+    border-bottom: 1px solid #eee;
 }
 
 .mobile-nav-list a {
-  font-size: 1.15rem;
-  font-weight: 600;
-  color: #1F2937;
-  display: block;
+    display: block;
+
+    padding: 15px 5px;
+
+    font-size: 16px;
+    font-weight: 500;
+
+    transition: color 0.2s ease;
 }
 
-/* ==========================================================================
-   2. Hero Section ("India's #1 Ride-hailing App")
-   ========================================================================== */
+.mobile-nav-list a:hover {
+    color: #f5c400;
+}
+
+
+/* =========================================================
+   HERO SECTION
+   ========================================================= */
+
 .hero-section {
-  padding: 3.5rem 0 4.5rem;
-  background-color: #ffffff;
+    padding: 80px 0;
+
+    background: #fff;
 }
 
 .hero-heading {
-  font-size: 3.4rem;
-  font-weight: 800;
-  color: var(--rapido-black);
-  line-height: 1.15;
-  letter-spacing: -0.5px;
-  margin-bottom: 0.85rem;
+    font-size: clamp(42px, 5vw, 68px);
+
+    line-height: 1.08;
+
+    font-weight: 700;
+
+    letter-spacing: -2px;
+
+    margin-bottom: 20px;
 }
 
 .hero-subtext {
-  font-size: 1.25rem;
-  color: var(--rapido-text-grey);
-  margin-bottom: 2.25rem;
-  max-width: 480px;
+    font-size: 18px;
+
+    color: #555;
+
+    margin-bottom: 30px;
 }
 
-/* Ride Booking Inputs Wrapper */
+
+/* =========================================================
+   BOOKING BOX
+   ========================================================= */
+
 .hero-booking-box {
-  max-width: 460px;
-  display: flex;
-  flex-direction: column;
-  gap: 16px;
+    width: 100%;
+    max-width: 500px;
+
+    padding: 22px;
+
+    background: #fff;
+
+    border-radius: 20px;
+
+    box-shadow: 0 12px 35px rgba(0, 0, 0, 0.10);
+
+    border: 1px solid #eee;
 }
 
 .hero-input-group {
-  position: relative;
-  display: flex;
-  align-items: center;
-  border: 1.5px solid #D1D5DB;
-  border-radius: 10px;
-  background: #ffffff;
-  padding: 0 16px;
-  height: 58px;
-  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+    display: flex;
+    align-items: center;
+
+    gap: 12px;
+
+    min-height: 58px;
+
+    border: 1px solid #ddd;
+
+    border-radius: 12px;
+
+    margin-bottom: 14px;
+
+    padding: 0 16px;
+
+    background: #fafafa;
+
+    transition: all 0.25s ease;
 }
 
 .hero-input-group:focus-within {
-  border-color: #000000;
-  box-shadow: 0 0 0 2px rgba(0, 0, 0, 0.05);
+    border-color: #f5c400;
+
+    background: #fff;
+
+    box-shadow: 0 0 0 3px rgba(245, 196, 0, 0.12);
 }
 
 .hero-input-icon {
-  font-size: 1.2rem;
-  margin-right: 14px;
-  color: #000000;
-  display: flex;
-  align-items: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 24px;
+
+    flex-shrink: 0;
+
+    font-size: 19px;
+
+    color: #f5c400;
 }
 
 .hero-input-field {
-  flex: 1;
-  border: none;
-  outline: none;
-  font-size: 1.05rem;
-  color: var(--rapido-black);
-  font-weight: 500;
-  background: transparent;
+    flex: 1;
+
+    width: 100%;
+
+    min-width: 0;
+
+    border: none;
+    outline: none;
+
+    background: transparent;
+
+    font-family: "Poppins", sans-serif;
+
+    font-size: 14px;
+
+    color: #333;
 }
 
 .hero-input-field::placeholder {
-  color: #6B7280;
-  font-weight: 400;
+    color: #888;
 }
 
-/* Big Yellow Book Ride Button */
 .btn-book-ride-main {
-  background-color: var(--rapido-yellow);
-  color: #000000;
-  font-weight: 700;
-  font-size: 1.25rem;
-  height: 56px;
-  border-radius: 10px;
-  border: none;
-  cursor: pointer;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  transition: background-color 0.2s ease, transform 0.15s ease;
-  margin-top: 4px;
-  width: 100%;
+    width: 100%;
+
+    min-height: 58px;
+
+    border: none;
+
+    border-radius: 12px;
+
+    background: #f5c400;
+
+    color: #111;
+
+    font-family: "Poppins", sans-serif;
+
+    font-size: 16px;
+
+    font-weight: 700;
+
+    cursor: pointer;
+
+    transition: all 0.3s ease;
 }
 
 .btn-book-ride-main:hover {
-  background-color: var(--rapido-yellow-hover);
-  transform: translateY(-1px);
+    background: #111;
+
+    color: #fff;
+
+    transform: translateY(-2px);
 }
 
-/* Hero Right Capsule / Arch Image */
+
+/* =========================================================
+   HERO IMAGE
+   ========================================================= */
+
 .hero-image-container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  position: relative;
+    width: 100%;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
 }
 
 .hero-fleet-img {
-  width: 100%;
-  max-width: 540px;
-  height: auto;
-  border-radius: 28px;
-  object-fit: cover;
+    width: 100%;
+
+    max-width: 620px;
+
+    height: auto;
+
+    object-fit: contain;
 }
 
-/* ==========================================================================
-   3. "Our Services" Section
-   ========================================================================== */
-.services-section {
-  padding: 4.5rem 0 5rem;
-  background-color: #ffffff;
+
+/* =========================================================
+   COMMON SECTION
+   ========================================================= */
+
+.services-section,
+.offer-section,
+.earn-section,
+.download-now-section {
+    padding: 90px 0;
 }
 
-/* Service Cards: High-Resolution Graphic Cards Matching Rapido Official UI */
+.section-title-container {
+    text-align: center;
+
+    margin-bottom: 50px;
+}
+
+.section-main-title {
+    font-size: clamp(32px, 4vw, 48px);
+
+    font-weight: 700;
+
+    margin-bottom: 12px;
+}
+
+.title-underline-bar {
+    width: 65px;
+    height: 5px;
+
+    background: #f5c400;
+
+    border-radius: 10px;
+
+    margin: 0 auto;
+}
+
+
+/* =========================================================
+   SERVICES
+   ========================================================= */
+
 .service-card-anchor {
-  display: block;
-  text-decoration: none;
-  border-radius: 16px;
-  outline: none;
+    display: block;
+
+    height: 100%;
 }
 
 .service-card-inner {
-  background-color: var(--rapido-card-bg);
-  border-radius: 16px;
-  overflow: hidden;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.03);
-  transition: transform 0.25s ease, box-shadow 0.25s ease;
-  cursor: pointer;
+    overflow: hidden;
+
+    border-radius: 18px;
+
+    background: #fff;
+
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
 }
 
-.service-card-anchor:hover .service-card-inner,
 .service-card-inner:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.08);
+    transform: translateY(-8px);
+
+    box-shadow: 0 18px 40px rgba(0, 0, 0, 0.14);
 }
 
 .service-card-img {
-  width: 100%;
-  height: auto;
-  display: block;
-  border-radius: 16px;
-  object-fit: cover;
-  transition: transform 0.25s ease;
+    width: 100%;
+
+    height: auto;
+
+    object-fit: cover;
 }
 
-.service-card-anchor:hover .service-card-img {
-  transform: scale(1.015);
-}
 
-/* ==========================================================================
-   4. "What we offer" Section
-   ========================================================================== */
-.offer-section {
-  padding: 4.5rem 0 5.5rem;
-  background-color: #ffffff;
-}
+/* =========================================================
+   WHAT WE OFFER
+   ========================================================= */
 
 .offer-card {
-  display: flex;
-  flex-direction: column;
-  height: 100%;
+    height: 100%;
+
+    text-align: center;
+
+    padding: 25px 20px;
+
+    border-radius: 18px;
+
+    background: #fff;
+
+    transition: all 0.3s ease;
+}
+
+.offer-card:hover {
+    transform: translateY(-7px);
+
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.09);
 }
 
 .offer-img-wrap {
-  width: 100%;
-  height: 255px;
-  border-radius: 20px;
-  overflow: hidden;
-  margin-bottom: 1.25rem;
+    width: 100%;
+
+    margin-bottom: 25px;
 }
 
 .offer-img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  transition: transform 0.4s ease;
-}
+    width: 100%;
 
-.offer-card:hover .offer-img {
-  transform: scale(1.04);
+    max-width: 280px;
+
+    margin: 0 auto;
+
+    object-fit: contain;
 }
 
 .offer-card-title {
-  font-size: 1.35rem;
-  font-weight: 800;
-  color: var(--rapido-black);
-  margin-bottom: 8px;
+    font-size: 22px;
+
+    font-weight: 700;
+
+    margin-bottom: 12px;
 }
 
 .offer-card-desc {
-  font-size: 0.95rem;
-  color: var(--rapido-text-grey);
-  line-height: 1.6;
+    color: #666;
+
+    font-size: 14px;
+
+    line-height: 1.8;
+
+    max-width: 350px;
+
+    margin: 0 auto;
 }
 
-/* ==========================================================================
-   5. "Earn with Rapido" Section (Dark Blue Banner)
-   ========================================================================== */
+
+/* =========================================================
+   EARN WITH RAPIDO
+   ========================================================= */
+
 .earn-section {
-  background-color: var(--rapido-dark-blue);
-  color: #ffffff;
-  padding: 4.5rem 0;
-  position: relative;
-  overflow: hidden;
+    background: #f8f8f8;
 }
 
 .earn-card-img-wrap {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+    width: 100%;
+
+    display: flex;
+
+    justify-content: center;
 }
 
 .earn-card-img {
-  width: 100%;
-  max-width: 460px;
-  height: auto;
-  border-radius: 20px;
-  box-shadow: 0 12px 36px rgba(0, 0, 0, 0.25);
-  object-fit: cover;
+    width: 100%;
+
+    max-width: 580px;
+
+    border-radius: 20px;
+
+    object-fit: cover;
 }
 
 .earn-content-wrap {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  height: 100%;
-  padding-left: 2rem;
+    padding-left: 25px;
 }
 
 .earn-title {
-  font-size: 3.2rem;
-  font-weight: 800;
-  color: #ffffff;
-  line-height: 1.12;
-  margin-bottom: 8px;
+    font-size: clamp(40px, 5vw, 64px);
+
+    font-weight: 700;
+
+    line-height: 1.1;
+
+    margin-bottom: 15px;
 }
 
 .earn-underline-bar {
-  width: 80px;
-  height: 5px;
-  background-color: var(--rapido-yellow);
-  border-radius: 3px;
-  margin-bottom: 1.75rem;
+    width: 65px;
+    height: 5px;
+
+    background: #f5c400;
+
+    border-radius: 10px;
+
+    margin-bottom: 25px;
 }
 
 .earn-description {
-  font-size: 1.35rem;
-  color: rgba(255, 255, 255, 0.95);
-  line-height: 1.5;
-  margin-bottom: 2.25rem;
-  max-width: 440px;
+    max-width: 500px;
+
+    color: #555;
+
+    font-size: 17px;
+
+    line-height: 1.8;
+
+    margin-bottom: 30px;
 }
 
 .btn-start-earning {
-  background-color: var(--rapido-yellow);
-  color: #000000 !important;
-  font-weight: 700;
-  font-size: 1.15rem;
-  padding: 14px 34px;
-  border-radius: 999px;
-  display: inline-flex;
-  align-items: center;
-  gap: 10px;
-  border: none;
-  cursor: pointer;
-  width: fit-content;
-  transition: background-color 0.2s ease, transform 0.15s ease;
+    display: inline-flex;
+
+    align-items: center;
+
+    gap: 12px;
+
+    padding: 14px 26px;
+
+    background: #111;
+
+    color: #fff;
+
+    border-radius: 30px;
+
+    font-size: 15px;
+
+    font-weight: 600;
+
+    transition: all 0.3s ease;
 }
 
 .btn-start-earning:hover {
-  background-color: var(--rapido-yellow-hover);
-  transform: translateY(-2px);
-  color: #000000;
+    background: #f5c400;
+
+    color: #111;
+
+    transform: translateX(4px);
 }
 
-/* ==========================================================================
-   6. "Download Now" Section (media_1789926959243.png)
-   ========================================================================== */
+
+/* =========================================================
+   DOWNLOAD NOW
+   ========================================================= */
+
 .download-now-section {
-  background-color: #F5F5F5;
-  padding: 4.5rem 0 5.5rem;
+    background: #fff;
 }
 
 .download-now-header {
-  text-align: center;
-  margin-bottom: 3.5rem;
+    text-align: center;
+
+    margin-bottom: 45px;
 }
 
 .download-now-title {
-  font-size: 2.75rem;
-  font-weight: 800;
-  color: var(--rapido-black);
-  margin-bottom: 8px;
-  letter-spacing: -0.5px;
+    font-size: clamp(32px, 4vw, 48px);
+
+    font-weight: 700;
+
+    margin-bottom: 12px;
 }
 
 .download-now-underline {
-  width: 90px;
-  height: 5px;
-  background-color: var(--rapido-yellow);
-  border-radius: 3px;
-  margin: 0 auto;
+    width: 65px;
+    height: 5px;
+
+    background: #f5c400;
+
+    border-radius: 10px;
+
+    margin: 0 auto;
 }
 
-.download-cards{
-  display: flex;
-  gap: 30px;
-  justify-content: center;
-  align-items: center;
+.download-cards {
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 30px;
+
+    flex-wrap: wrap;
 }
+
 .download-cards img {
-    width: 300px;
+    width: 100%;
+
+    max-width: 540px;
+
     height: auto;
+
+    object-fit: contain;
 }
-/* ==========================================================================
-   7. Pure Black Footer (media_1789926959287.png)
-   ========================================================================== */
+
+
+/* =========================================================
+   FOOTER
+   ========================================================= */
+
 .site-footer-black {
-  background-color: #000000;
-  color: #FFFFFF;
-  padding: 4.5rem 0 2rem;
+    background: #111;
+
+    color: #fff;
+
+    padding: 70px 0 30px;
 }
 
 .footer-col-head {
-  font-size: 1.15rem;
-  font-weight: 700;
-  color: #FFFFFF;
-  margin-bottom: 1.5rem;
+    font-size: 15px;
+
+    font-weight: 700;
+
+    margin-bottom: 20px;
 }
 
 .footer-store-badges {
-  display: flex;
-  flex-direction: column;
-  gap: 14px;
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 12px;
 }
 
 .footer-store-badges img {
-  height: 42px;
-  width: auto;
-  border-radius: 6px;
-  transition: transform 0.2s ease;
-}
+    width: 145px;
 
-.footer-store-badges a:hover img {
-  transform: scale(1.03);
+    height: auto;
 }
 
 .footer-links-col {
-  list-style: none;
-  padding: 0;
-  margin: 0;
+    list-style: none;
+
+    padding: 0;
+
+    margin: 0;
 }
 
 .footer-links-col li {
-  margin-bottom: 0.75rem;
+    margin-bottom: 13px;
 }
 
 .footer-links-col a {
-  color: #FFFFFF;
-  font-size: 0.95rem;
-  font-weight: 400;
-  transition: color 0.2s ease;
+    color: #bbb;
+
+    font-size: 13px;
+
+    transition: color 0.25s ease;
 }
 
 .footer-links-col a:hover {
-  color: var(--rapido-yellow);
+    color: #f5c400;
 }
 
 .footer-social-row {
-  display: flex;
-  align-items: center;
-  gap: 20px;
+    display: flex;
+
+    align-items: center;
+
+    gap: 15px;
 }
 
 .footer-social-row a {
-  color: #FFFFFF;
-  font-size: 1.4rem;
-  display: inline-flex;
-  transition: color 0.2s ease, transform 0.15s ease;
+    width: 38px;
+    height: 38px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 50%;
+
+    background: #222;
+
+    color: #fff;
+
+    transition: all 0.3s ease;
 }
 
 .footer-social-row a:hover {
-  color: var(--rapido-yellow);
-  transform: translateY(-2px);
+    background: #f5c400;
+
+    color: #111;
+
+    transform: translateY(-3px);
 }
 
 .footer-copyright {
-  text-align: center;
-  color: rgba(255, 255, 255, 0.75);
-  font-size: 0.9rem;
-  margin-top: 4rem;
-  padding-top: 1.5rem;
-  border-top: 1px solid rgba(255, 255, 255, 0.1);
+    text-align: center;
+
+    color: #888;
+
+    font-size: 12px;
+
+    margin-top: 50px;
+
+    padding-top: 25px;
+
+    border-top: 1px solid #2c2c2c;
 }
 
-/* ==========================================================================
-   Responsive Breakpoints
-   ========================================================================== */
+
+/* =========================================================
+   LARGE TABLET / SMALL DESKTOP
+   992px - 1199px
+   ========================================================= */
+
+@media (max-width: 1199px) {
+
+    .container-rapido {
+        max-width: 1000px;
+    }
+
+    .nav-links-menu {
+        gap: 20px;
+    }
+
+    .nav-links-menu a {
+        font-size: 13px;
+    }
+
+    .hero-heading {
+        font-size: 54px;
+    }
+}
+
+
+/* =========================================================
+   TABLET
+   768px - 991px
+   ========================================================= */
+
 @media (max-width: 991px) {
-  .nav-links-menu {
-    display: none;
-  }
-  
-  .mobile-nav-toggle {
-    display: block;
-  }
 
-  .hero-heading {
-    font-size: 2.75rem;
-  }
+    .container-rapido {
+        max-width: 760px;
 
-  .hero-booking-box {
-    max-width: 100%;
-    margin-bottom: 2.5rem;
-  }
+        padding-left: 20px;
+        padding-right: 20px;
+    }
 
-  .earn-content-wrap {
-    padding-left: 0;
-    margin-top: 2rem;
-  }
+    /* Hide desktop navigation */
 
-  .earn-title {
-    font-size: 2.5rem;
-  }
+    .nav-links-menu {
+        display: none !important;
+    }
 
-  .download-now-card {
-    padding: 24px;
-    gap: 20px;
-  }
+    /* Hide desktop Download button */
 
-  .card-pill-badge {
-    padding: 12px 24px;
-  }
+    .navbar-inner > .d-flex .btn-download-app {
+        display: none;
+    }
 
-  .card-pill-badge .brand-text {
-    font-size: 1.75rem;
-  }
+    /* Show hamburger */
 
-  .download-now-text {
-    font-size: 1.35rem;
-  }
+    .mobile-nav-toggle {
+        display: flex;
+    }
+
+    .navbar-inner {
+        min-height: 70px;
+
+        gap: 10px;
+    }
+
+    .rapido-pill-logo img {
+        width: 130px;
+
+        max-height: 50px;
+    }
+
+    /* Hero */
+
+    .hero-section {
+        padding: 60px 0;
+    }
+
+    .hero-heading {
+        font-size: 48px;
+    }
+
+    .hero-subtext {
+        font-size: 16px;
+    }
+
+    .hero-image-container {
+        margin-top: 20px;
+    }
+
+    /* Sections */
+
+    .services-section,
+    .offer-section,
+    .earn-section,
+    .download-now-section {
+        padding: 70px 0;
+    }
+
+    .earn-content-wrap {
+        padding-left: 0;
+    }
+
+    .earn-title {
+        font-size: 48px;
+    }
 }
+
+
+/* =========================================================
+   MOBILE
+   576px - 767px
+   ========================================================= */
 
 @media (max-width: 767px) {
-  .hero-heading {
-    font-size: 2.2rem;
-  }
 
-  .section-main-title,
-  .download-now-title {
-    font-size: 2rem;
-  }
+    .container-rapido {
+        width: 100%;
 
-  .earn-title {
-    font-size: 2.1rem;
-  }
+        padding-left: 16px;
+        padding-right: 16px;
+    }
 
-  .earn-description {
-    font-size: 1.1rem;
-  }
+    /* -------------------------
+       Navbar
+       ------------------------- */
 
-  .service-box-card {
-    min-height: auto;
-    padding: 18px 16px;
-  }
+    .navbar-inner {
+        min-height: 66px;
 
-  .service-box-img-wrap {
-    width: 100px;
-    height: 75px;
-  }
+        height: 66px;
+    }
 
-  .download-now-card {
-    flex-direction: column;
-    text-align: center;
-  }
+    .rapido-pill-logo img {
+        width: 115px;
+
+        max-height: 45px;
+    }
+
+    .mobile-nav-toggle {
+        width: 42px;
+        height: 42px;
+
+        font-size: 26px;
+    }
+
+    /* -------------------------
+       Hero
+       ------------------------- */
+
+    .hero-section {
+        padding: 42px 0 55px;
+    }
+
+    .hero-heading {
+        font-size: 40px !important;
+
+        line-height: 1.12;
+
+        letter-spacing: -1px;
+
+        margin-bottom: 15px;
+    }
+
+    .hero-subtext {
+        font-size: 14px;
+
+        line-height: 1.6;
+
+        margin-bottom: 24px;
+    }
+
+    /* Booking */
+
+    .hero-booking-box {
+        width: 100%;
+
+        max-width: none;
+
+        padding: 16px;
+
+        border-radius: 18px;
+
+        box-shadow:
+            0 10px 30px rgba(0, 0, 0, 0.08);
+    }
+
+    .hero-input-group {
+        width: 100%;
+
+        min-height: 54px;
+
+        height: 54px;
+
+        gap: 10px;
+
+        padding: 0 14px;
+
+        margin-bottom: 12px;
+
+        border-radius: 12px;
+    }
+
+    .hero-input-icon {
+        width: 25px;
+
+        font-size: 18px;
+    }
+
+    .hero-input-field {
+        width: 100%;
+
+        min-width: 0;
+
+        font-size: 14px;
+    }
+
+    .btn-book-ride-main {
+        width: 100%;
+
+        min-height: 54px;
+
+        height: 54px;
+
+        border-radius: 12px;
+
+        font-size: 15px;
+    }
+
+    /* Hero Image */
+
+    .hero-image-container {
+        width: 100%;
+
+        margin-top: 30px;
+    }
+
+    .hero-fleet-img {
+        width: 100%;
+
+        max-width: 100%;
+
+        border-radius: 18px;
+    }
+
+    /* -------------------------
+       Sections
+       ------------------------- */
+
+    .services-section,
+    .offer-section,
+    .earn-section,
+    .download-now-section {
+        padding: 55px 0;
+    }
+
+    .section-title-container {
+        margin-bottom: 32px;
+    }
+
+    .section-main-title,
+    .download-now-title {
+        font-size: 32px;
+    }
+
+    /* -------------------------
+       Services
+       ------------------------- */
+
+    .service-card-inner {
+        border-radius: 14px;
+    }
+
+    /* -------------------------
+       Offer
+       ------------------------- */
+
+    .offer-card {
+        padding: 15px;
+    }
+
+    .offer-card-title {
+        font-size: 20px;
+    }
+
+    .offer-card-desc {
+        font-size: 13px;
+
+        line-height: 1.7;
+    }
+
+    /* -------------------------
+       Earn
+       ------------------------- */
+
+    .earn-card-img {
+        width: 100%;
+
+        border-radius: 15px;
+    }
+
+    .earn-content-wrap {
+        padding-left: 0;
+
+        padding-top: 15px;
+    }
+
+    .earn-title {
+        font-size: 40px;
+    }
+
+    .earn-description {
+        font-size: 14px;
+
+        line-height: 1.7;
+    }
+
+    .btn-start-earning {
+        padding: 12px 21px;
+
+        font-size: 14px;
+    }
+
+    /* -------------------------
+       Download
+       ------------------------- */
+
+    .download-now-header {
+        margin-bottom: 30px;
+    }
+
+    .download-cards {
+        gap: 18px;
+    }
+
+    .download-cards img {
+        width: 100%;
+
+        max-width: 100%;
+    }
+
+    /* -------------------------
+       Footer
+       ------------------------- */
+
+    .site-footer-black {
+        padding: 50px 0 25px;
+    }
+
+    .footer-col-head {
+        font-size: 14px;
+    }
+
+    .footer-links-col a {
+        font-size: 12px;
+    }
+
+    .footer-store-badges img {
+        width: 125px;
+    }
+
+    .footer-social-row {
+        gap: 10px;
+    }
+
+    .footer-social-row a {
+        width: 34px;
+        height: 34px;
+    }
+
+    .footer-copyright {
+        font-size: 11px;
+
+        margin-top: 35px;
+    }
+}
+
+
+/* =========================================================
+   SMALL MOBILE
+   481px - 575px
+   ========================================================= */
+
+@media (max-width: 575px) {
+
+    .hero-heading {
+        font-size: 36px !important;
+    }
+
+    .hero-booking-box {
+        padding: 14px;
+    }
+
+    .hero-input-group {
+        height: 53px;
+
+        min-height: 53px;
+    }
+
+    .btn-book-ride-main {
+        height: 53px;
+
+        min-height: 53px;
+    }
+
+    .offer-img {
+        max-width: 240px;
+    }
+}
+
+
+/* =========================================================
+   EXTRA SMALL MOBILE
+   480px AND BELOW
+   ========================================================= */
+
+@media (max-width: 480px) {
+
+    .container-rapido {
+        padding-left: 13px;
+        padding-right: 13px;
+    }
+
+    /* Navbar */
+
+    .navbar-inner {
+        min-height: 64px;
+
+        height: 64px;
+    }
+
+    .rapido-pill-logo img {
+        width: 108px;
+
+        max-height: 42px;
+    }
+
+    .mobile-nav-toggle {
+        width: 40px;
+        height: 40px;
+
+        font-size: 24px;
+    }
+
+    /* Hero */
+
+    .hero-section {
+        padding: 35px 0 45px;
+    }
+
+    .hero-heading {
+        font-size: 33px !important;
+
+        letter-spacing: -0.8px;
+    }
+
+    .hero-subtext {
+        font-size: 13px;
+
+        margin-bottom: 20px;
+    }
+
+    /* Booking */
+
+    .hero-booking-box {
+        padding: 12px;
+
+        border-radius: 17px;
+    }
+
+    .hero-input-group {
+        min-height: 50px;
+
+        height: 50px;
+
+        padding: 0 12px;
+
+        margin-bottom: 10px;
+    }
+
+    .hero-input-field {
+        font-size: 13px;
+    }
+
+    .hero-input-icon {
+        width: 24px;
+
+        font-size: 17px;
+    }
+
+    .btn-book-ride-main {
+        min-height: 50px;
+
+        height: 50px;
+
+        font-size: 14px;
+    }
+
+    /* Section headings */
+
+    .section-main-title,
+    .download-now-title {
+        font-size: 28px;
+    }
+
+    /* Earn */
+
+    .earn-title {
+        font-size: 34px;
+    }
+
+    .earn-description {
+        font-size: 13px;
+    }
+
+    .btn-start-earning {
+        width: 100%;
+
+        justify-content: center;
+    }
+
+    /* Drawer */
+
+    .mobile-nav-drawer {
+        width: 88%;
+
+        padding: 20px;
+    }
+
+    .mobile-nav-list a {
+        font-size: 15px;
+
+        padding: 14px 5px;
+    }
+}
+
+
+/* =========================================================
+   VERY SMALL DEVICES
+   360px AND BELOW
+   ========================================================= */
+
+@media (max-width: 360px) {
+
+    .container-rapido {
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+
+    .rapido-pill-logo img {
+        width: 95px;
+    }
+
+    .hero-heading {
+        font-size: 30px !important;
+    }
+
+    .hero-booking-box {
+        padding: 10px;
+    }
+
+    .hero-input-group {
+        height: 48px;
+
+        min-height: 48px;
+    }
+
+    .btn-book-ride-main {
+        height: 48px;
+
+        min-height: 48px;
+    }
+
+    .mobile-nav-toggle {
+        font-size: 22px;
+    }
+}
+
+
+/* =========================================================
+   ACCESSIBILITY
+   ========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+    *,
+    *::before,
+    *::after {
+        scroll-behavior: auto !important;
+
+        transition: none !important;
+
+        animation: none !important;
+    }
 }
