@@ -1,6 +1,6 @@
 /* =========================================================
    RAPIDO RESPONSIVE WEBSITE
-   Complete Responsive CSS
+   Complete Responsive CSS (card & button hover effects removed)
    ========================================================= */
 
 /* =========================================================
@@ -92,11 +92,9 @@ input {
     align-items: center;
     justify-content: center;
     gap: 28px;
-
     list-style: none;
     margin: 0;
     padding: 0;
-
     flex: 1;
 }
 
@@ -107,12 +105,9 @@ input {
 
 .nav-links-menu a {
     position: relative;
-
     font-size: 14px;
     font-weight: 500;
-
     color: #222;
-
     transition: color 0.3s ease;
 }
 
@@ -123,16 +118,12 @@ input {
 
 .nav-links-menu a::after {
     content: "";
-
     position: absolute;
     left: 0;
     bottom: -7px;
-
     width: 0;
     height: 2px;
-
     background: #f5c400;
-
     transition: width 0.3s ease;
 }
 
@@ -150,27 +141,13 @@ input {
     display: inline-flex;
     align-items: center;
     justify-content: center;
-
     background: #111;
     color: #fff;
-
     padding: 12px 24px;
-
     border-radius: 30px;
-
     font-size: 14px;
     font-weight: 600;
-
     white-space: nowrap;
-
-    transition: all 0.3s ease;
-}
-
-.btn-download-app:hover {
-    background: #f5c400;
-    color: #111;
-
-    transform: translateY(-2px);
 }
 
 
@@ -184,57 +161,38 @@ input {
 
 .mobile-nav-toggle {
     display: none;
-
     align-items: center;
     justify-content: center;
-
     width: 42px;
     height: 42px;
-
     cursor: pointer;
-
     font-size: 28px;
     line-height: 1;
-
     color: #111;
 }
 
 .mobile-nav-drawer {
     position: fixed;
-
     top: 0;
     right: -100%;
-
     width: min(350px, 88%);
     height: 100vh;
-
     background: #fff;
-
     z-index: 10000;
-
     padding: 24px;
-
     box-shadow: -10px 0 30px rgba(0, 0, 0, 0.15);
-
     transition: right 0.35s ease;
-
     overflow-y: auto;
 }
 
 .mobile-nav-backdrop {
     position: fixed;
-
     inset: 0;
-
     background: rgba(0, 0, 0, 0.45);
-
     z-index: 9998;
-
     opacity: 0;
     visibility: hidden;
-
     transition: all 0.3s ease;
-
     cursor: pointer;
 }
 
@@ -251,9 +209,7 @@ input {
     display: flex;
     align-items: center;
     justify-content: space-between;
-
     padding-bottom: 20px;
-
     border-bottom: 1px solid #eee;
 }
 
@@ -261,18 +217,14 @@ input {
     display: flex;
     align-items: center;
     justify-content: center;
-
     width: 40px;
     height: 40px;
-
     cursor: pointer;
-
     font-size: 22px;
 }
 
 .mobile-nav-list {
     list-style: none;
-
     margin: 25px 0;
     padding: 0;
 }
@@ -283,12 +235,9 @@ input {
 
 .mobile-nav-list a {
     display: block;
-
     padding: 15px 5px;
-
     font-size: 16px;
     font-weight: 500;
-
     transition: color 0.2s ease;
 }
 
@@ -303,27 +252,20 @@ input {
 
 .hero-section {
     padding: 80px 0;
-
     background: #fff;
 }
 
 .hero-heading {
     font-size: clamp(42px, 5vw, 68px);
-
     line-height: 1.08;
-
     font-weight: 700;
-
     letter-spacing: -2px;
-
     margin-bottom: 20px;
 }
 
 .hero-subtext {
     font-size: 18px;
-
     color: #555;
-
     margin-bottom: 30px;
 }
 
@@ -335,44 +277,29 @@ input {
 .hero-booking-box {
     width: 100%;
     max-width: 500px;
-
     padding: 22px;
-
     background: #fff;
-
     border-radius: 20px;
-
     box-shadow: 0 12px 35px rgba(0, 0, 0, 0.10);
-
     border: 1px solid #eee;
 }
 
 .hero-input-group {
     display: flex;
     align-items: center;
-
     gap: 12px;
-
     min-height: 58px;
-
     border: 1px solid #ddd;
-
     border-radius: 12px;
-
     margin-bottom: 14px;
-
     padding: 0 16px;
-
     background: #fafafa;
-
     transition: all 0.25s ease;
 }
 
 .hero-input-group:focus-within {
     border-color: #f5c400;
-
     background: #fff;
-
     box-shadow: 0 0 0 3px rgba(245, 196, 0, 0.12);
 }
 
@@ -380,32 +307,21 @@ input {
     display: flex;
     align-items: center;
     justify-content: center;
-
     width: 24px;
-
     flex-shrink: 0;
-
     font-size: 19px;
-
     color: #f5c400;
 }
 
 .hero-input-field {
     flex: 1;
-
     width: 100%;
-
     min-width: 0;
-
     border: none;
     outline: none;
-
     background: transparent;
-
     font-family: "Poppins", sans-serif;
-
     font-size: 14px;
-
     color: #333;
 }
 
@@ -415,34 +331,15 @@ input {
 
 .btn-book-ride-main {
     width: 100%;
-
     min-height: 58px;
-
     border: none;
-
     border-radius: 12px;
-
     background: #f5c400;
-
     color: #111;
-
     font-family: "Poppins", sans-serif;
-
     font-size: 16px;
-
     font-weight: 700;
-
     cursor: pointer;
-
-    transition: all 0.3s ease;
-}
-
-.btn-book-ride-main:hover {
-    background: #111;
-
-    color: #fff;
-
-    transform: translateY(-2px);
 }
 
 
@@ -452,21 +349,15 @@ input {
 
 .hero-image-container {
     width: 100%;
-
     display: flex;
-
     justify-content: center;
-
     align-items: center;
 }
 
 .hero-fleet-img {
     width: 100%;
-
     max-width: 620px;
-
     height: auto;
-
     object-fit: contain;
 }
 
@@ -484,26 +375,20 @@ input {
 
 .section-title-container {
     text-align: center;
-
     margin-bottom: 50px;
 }
 
 .section-main-title {
     font-size: clamp(32px, 4vw, 48px);
-
     font-weight: 700;
-
     margin-bottom: 12px;
 }
 
 .title-underline-bar {
     width: 65px;
     height: 5px;
-
     background: #f5c400;
-
     border-radius: 10px;
-
     margin: 0 auto;
 }
 
@@ -514,35 +399,19 @@ input {
 
 .service-card-anchor {
     display: block;
-
     height: 100%;
 }
 
 .service-card-inner {
     overflow: hidden;
-
     border-radius: 18px;
-
     background: #fff;
-
     box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
-
-    transition:
-        transform 0.3s ease,
-        box-shadow 0.3s ease;
-}
-
-.service-card-inner:hover {
-    transform: translateY(-8px);
-
-    box-shadow: 0 18px 40px rgba(0, 0, 0, 0.14);
 }
 
 .service-card-img {
     width: 100%;
-
     height: auto;
-
     object-fit: cover;
 }
 
@@ -553,57 +422,35 @@ input {
 
 .offer-card {
     height: 100%;
-
     text-align: center;
-
     padding: 25px 20px;
-
     border-radius: 18px;
-
     background: #fff;
-
-    transition: all 0.3s ease;
-}
-
-.offer-card:hover {
-    transform: translateY(-7px);
-
-    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.09);
 }
 
 .offer-img-wrap {
     width: 100%;
-
     margin-bottom: 25px;
 }
 
 .offer-img {
     width: 100%;
-
     max-width: 280px;
-
     margin: 0 auto;
-
     object-fit: contain;
 }
 
 .offer-card-title {
     font-size: 22px;
-
     font-weight: 700;
-
     margin-bottom: 12px;
 }
 
 .offer-card-desc {
     color: #666;
-
     font-size: 14px;
-
     line-height: 1.8;
-
     max-width: 350px;
-
     margin: 0 auto;
 }
 
@@ -618,19 +465,14 @@ input {
 
 .earn-card-img-wrap {
     width: 100%;
-
     display: flex;
-
     justify-content: center;
 }
 
 .earn-card-img {
     width: 100%;
-
     max-width: 580px;
-
     border-radius: 20px;
-
     object-fit: cover;
 }
 
@@ -640,65 +482,37 @@ input {
 
 .earn-title {
     font-size: clamp(40px, 5vw, 64px);
-
     font-weight: 700;
-
     line-height: 1.1;
-
     margin-bottom: 15px;
 }
 
 .earn-underline-bar {
     width: 65px;
     height: 5px;
-
     background: #f5c400;
-
     border-radius: 10px;
-
     margin-bottom: 25px;
 }
 
 .earn-description {
     max-width: 500px;
-
     color: #555;
-
     font-size: 17px;
-
     line-height: 1.8;
-
     margin-bottom: 30px;
 }
 
 .btn-start-earning {
     display: inline-flex;
-
     align-items: center;
-
     gap: 12px;
-
     padding: 14px 26px;
-
     background: #111;
-
     color: #fff;
-
     border-radius: 30px;
-
     font-size: 15px;
-
     font-weight: 600;
-
-    transition: all 0.3s ease;
-}
-
-.btn-start-earning:hover {
-    background: #f5c400;
-
-    color: #111;
-
-    transform: translateX(4px);
 }
 
 
@@ -712,48 +526,35 @@ input {
 
 .download-now-header {
     text-align: center;
-
     margin-bottom: 45px;
 }
 
 .download-now-title {
     font-size: clamp(32px, 4vw, 48px);
-
     font-weight: 700;
-
     margin-bottom: 12px;
 }
 
 .download-now-underline {
     width: 65px;
     height: 5px;
-
     background: #f5c400;
-
     border-radius: 10px;
-
     margin: 0 auto;
 }
 
 .download-cards {
     display: flex;
-
     align-items: center;
-
     justify-content: center;
-
     gap: 30px;
-
     flex-wrap: wrap;
 }
 
 .download-cards img {
     width: 100%;
-
     max-width: 540px;
-
     height: auto;
-
     object-fit: contain;
 }
 
@@ -764,39 +565,30 @@ input {
 
 .site-footer-black {
     background: #111;
-
     color: #fff;
-
     padding: 70px 0 30px;
 }
 
 .footer-col-head {
     font-size: 15px;
-
     font-weight: 700;
-
     margin-bottom: 20px;
 }
 
 .footer-store-badges {
     display: flex;
-
     flex-direction: column;
-
     gap: 12px;
 }
 
 .footer-store-badges img {
     width: 145px;
-
     height: auto;
 }
 
 .footer-links-col {
     list-style: none;
-
     padding: 0;
-
     margin: 0;
 }
 
@@ -806,9 +598,7 @@ input {
 
 .footer-links-col a {
     color: #bbb;
-
     font-size: 13px;
-
     transition: color 0.25s ease;
 }
 
@@ -818,49 +608,27 @@ input {
 
 .footer-social-row {
     display: flex;
-
     align-items: center;
-
     gap: 15px;
 }
 
 .footer-social-row a {
     width: 38px;
     height: 38px;
-
     display: flex;
-
     align-items: center;
     justify-content: center;
-
     border-radius: 50%;
-
     background: #222;
-
     color: #fff;
-
-    transition: all 0.3s ease;
-}
-
-.footer-social-row a:hover {
-    background: #f5c400;
-
-    color: #111;
-
-    transform: translateY(-3px);
 }
 
 .footer-copyright {
     text-align: center;
-
     color: #888;
-
     font-size: 12px;
-
     margin-top: 50px;
-
     padding-top: 25px;
-
     border-top: 1px solid #2c2c2c;
 }
 
@@ -899,43 +667,36 @@ input {
 
     .container-rapido {
         max-width: 760px;
-
         padding-left: 20px;
         padding-right: 20px;
     }
 
     /* Hide desktop navigation */
-
     .nav-links-menu {
         display: none !important;
     }
 
     /* Hide desktop Download button */
-
     .navbar-inner > .d-flex .btn-download-app {
         display: none;
     }
 
     /* Show hamburger */
-
     .mobile-nav-toggle {
         display: flex;
     }
 
     .navbar-inner {
         min-height: 70px;
-
         gap: 10px;
     }
 
     .rapido-pill-logo img {
         width: 130px;
-
         max-height: 50px;
     }
 
     /* Hero */
-
     .hero-section {
         padding: 60px 0;
     }
@@ -953,7 +714,6 @@ input {
     }
 
     /* Sections */
-
     .services-section,
     .offer-section,
     .earn-section,
@@ -980,137 +740,96 @@ input {
 
     .container-rapido {
         width: 100%;
-
         padding-left: 16px;
         padding-right: 16px;
     }
 
-    /* -------------------------
-       Navbar
-       ------------------------- */
-
+    /* Navbar */
     .navbar-inner {
         min-height: 66px;
-
         height: 66px;
     }
 
     .rapido-pill-logo img {
         width: 115px;
-
         max-height: 45px;
     }
 
     .mobile-nav-toggle {
         width: 42px;
         height: 42px;
-
         font-size: 26px;
     }
 
-    /* -------------------------
-       Hero
-       ------------------------- */
-
+    /* Hero */
     .hero-section {
         padding: 42px 0 55px;
     }
 
     .hero-heading {
         font-size: 40px !important;
-
         line-height: 1.12;
-
         letter-spacing: -1px;
-
         margin-bottom: 15px;
     }
 
     .hero-subtext {
         font-size: 14px;
-
         line-height: 1.6;
-
         margin-bottom: 24px;
     }
 
     /* Booking */
-
     .hero-booking-box {
         width: 100%;
-
         max-width: none;
-
         padding: 16px;
-
         border-radius: 18px;
-
-        box-shadow:
-            0 10px 30px rgba(0, 0, 0, 0.08);
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
     }
 
     .hero-input-group {
         width: 100%;
-
         min-height: 54px;
-
         height: 54px;
-
         gap: 10px;
-
         padding: 0 14px;
-
         margin-bottom: 12px;
-
         border-radius: 12px;
     }
 
     .hero-input-icon {
         width: 25px;
-
         font-size: 18px;
     }
 
     .hero-input-field {
         width: 100%;
-
         min-width: 0;
-
         font-size: 14px;
     }
 
     .btn-book-ride-main {
         width: 100%;
-
         min-height: 54px;
-
         height: 54px;
-
         border-radius: 12px;
-
         font-size: 15px;
     }
 
     /* Hero Image */
-
     .hero-image-container {
         width: 100%;
-
         margin-top: 30px;
     }
 
     .hero-fleet-img {
         width: 100%;
-
         max-width: 100%;
-
         border-radius: 18px;
     }
 
-    /* -------------------------
-       Sections
-       ------------------------- */
-
+    /* Sections */
     .services-section,
     .offer-section,
     .earn-section,
@@ -1127,18 +846,12 @@ input {
         font-size: 32px;
     }
 
-    /* -------------------------
-       Services
-       ------------------------- */
-
+    /* Services */
     .service-card-inner {
         border-radius: 14px;
     }
 
-    /* -------------------------
-       Offer
-       ------------------------- */
-
+    /* Offer */
     .offer-card {
         padding: 15px;
     }
@@ -1149,23 +862,17 @@ input {
 
     .offer-card-desc {
         font-size: 13px;
-
         line-height: 1.7;
     }
 
-    /* -------------------------
-       Earn
-       ------------------------- */
-
+    /* Earn */
     .earn-card-img {
         width: 100%;
-
         border-radius: 15px;
     }
 
     .earn-content-wrap {
         padding-left: 0;
-
         padding-top: 15px;
     }
 
@@ -1175,20 +882,15 @@ input {
 
     .earn-description {
         font-size: 14px;
-
         line-height: 1.7;
     }
 
     .btn-start-earning {
         padding: 12px 21px;
-
         font-size: 14px;
     }
 
-    /* -------------------------
-       Download
-       ------------------------- */
-
+    /* Download */
     .download-now-header {
         margin-bottom: 30px;
     }
@@ -1199,14 +901,10 @@ input {
 
     .download-cards img {
         width: 100%;
-
         max-width: 100%;
     }
 
-    /* -------------------------
-       Footer
-       ------------------------- */
-
+    /* Footer */
     .site-footer-black {
         padding: 50px 0 25px;
     }
@@ -1234,7 +932,6 @@ input {
 
     .footer-copyright {
         font-size: 11px;
-
         margin-top: 35px;
     }
 }
@@ -1257,13 +954,11 @@ input {
 
     .hero-input-group {
         height: 53px;
-
         min-height: 53px;
     }
 
     .btn-book-ride-main {
         height: 53px;
-
         min-height: 53px;
     }
 
@@ -1286,59 +981,47 @@ input {
     }
 
     /* Navbar */
-
     .navbar-inner {
         min-height: 64px;
-
         height: 64px;
     }
 
     .rapido-pill-logo img {
         width: 108px;
-
         max-height: 42px;
     }
 
     .mobile-nav-toggle {
         width: 40px;
         height: 40px;
-
         font-size: 24px;
     }
 
     /* Hero */
-
     .hero-section {
         padding: 35px 0 45px;
     }
 
     .hero-heading {
         font-size: 33px !important;
-
         letter-spacing: -0.8px;
     }
 
     .hero-subtext {
         font-size: 13px;
-
         margin-bottom: 20px;
     }
 
     /* Booking */
-
     .hero-booking-box {
         padding: 12px;
-
         border-radius: 17px;
     }
 
     .hero-input-group {
         min-height: 50px;
-
         height: 50px;
-
         padding: 0 12px;
-
         margin-bottom: 10px;
     }
 
@@ -1348,27 +1031,22 @@ input {
 
     .hero-input-icon {
         width: 24px;
-
         font-size: 17px;
     }
 
     .btn-book-ride-main {
         min-height: 50px;
-
         height: 50px;
-
         font-size: 14px;
     }
 
     /* Section headings */
-
     .section-main-title,
     .download-now-title {
         font-size: 28px;
     }
 
     /* Earn */
-
     .earn-title {
         font-size: 34px;
     }
@@ -1379,21 +1057,17 @@ input {
 
     .btn-start-earning {
         width: 100%;
-
         justify-content: center;
     }
 
     /* Drawer */
-
     .mobile-nav-drawer {
         width: 88%;
-
         padding: 20px;
     }
 
     .mobile-nav-list a {
         font-size: 15px;
-
         padding: 14px 5px;
     }
 }
@@ -1425,13 +1099,11 @@ input {
 
     .hero-input-group {
         height: 48px;
-
         min-height: 48px;
     }
 
     .btn-book-ride-main {
         height: 48px;
-
         min-height: 48px;
     }
 
@@ -1451,9 +1123,42 @@ input {
     *::before,
     *::after {
         scroll-behavior: auto !important;
-
         transition: none !important;
-
         animation: none !important;
     }
+}
+/* =========================================================
+   EARN WITH RAPIDO
+   ========================================================= */
+
+.earn-section {
+    background: #1f4b82;
+}
+
+.earn-title {
+    font-size: clamp(40px, 5vw, 64px);
+    font-weight: 700;
+    line-height: 1.1;
+    margin-bottom: 15px;
+    color: #fff;
+}
+
+.earn-description {
+    max-width: 500px;
+    color: #fff;
+    font-size: 17px;
+    line-height: 1.8;
+    margin-bottom: 30px;
+}
+
+.btn-start-earning {
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+    padding: 14px 26px;
+    background: #ffc820;
+    color: #111;
+    border-radius: 30px;
+    font-size: 15px;
+    font-weight: 600;
 }
